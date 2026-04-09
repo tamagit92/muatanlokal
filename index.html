@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camp Muatan Lokal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    margin-bottom:15px;
+}
+
+.container{
+    padding:20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    cursor:pointer;
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card:active{
+    transform:scale(0.97);
+}
+
+@media(max-width:600px){
+.hero img{
+    width:90px;
+    height:90px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <img src="https://i.pravatar.cc/200">
+    <h1>Selamat Datang di Camp Muatan Lokal</h1>
+</section>
+
+<div class="container">
+    <div class="grid">
+
+        <div class="card" data-link="Materi-1/">
+            <h3>Desain Navbar</h3>
+        </div>
+
+        <div class="card" data-link="Materi-2/">
+            <h3>Hero Section</h3>
+        </div>
+
+        <div class="card" data-link="Materi-3/">
+            <h3>Desain Card</h3>
+        </div>
+
+        <div class="card" data-link="Materi-4/">
+            <h3>Layout Flexbox</h3>
+        </div>
+
+        <div class="card" data-link="Materi-5/">
+            <h3>Responsive Design</h3>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('click',()=>{
+        window.location.href = card.dataset.link;
+    });
+});
+</script>
+
+</body>
+</html>
