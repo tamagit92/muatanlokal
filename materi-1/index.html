@@ -87,6 +87,8 @@ body{
 /* LIST */
 .list{
     list-style:none;
+    padding:0;
+    margin:0;
 }
 
 .list li{
@@ -95,11 +97,35 @@ body{
     border-radius:10px;
     margin-bottom:8px;
     transition:0.2s;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
 }
 
 .list li:hover{
     background:#e2e8f0;
     transform:translateX(5px);
+}
+
+.nama-siswa{
+    flex:1;
+    min-width:0;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:52px;
+    padding:4px 10px;
+    border-radius:999px;
+    background:#dbeafe;
+    color:#1d4ed8;
+    font-size:13px;
+    font-weight:700;
+    line-height:1;
+    white-space:nowrap;
 }
 
 /* RESPONSIVE */
@@ -108,9 +134,12 @@ body{
         flex-direction:column;
         align-items:flex-start;
     }
+
+    .list li{
+        align-items:flex-start;
+    }
 }
 </style>
-
 </head>
 <body>
 
@@ -121,7 +150,6 @@ body{
 
 <div class="container">
 
-    <!-- CARD KOTAK -->
     <div class="card">
         <h3 style="margin-bottom:15px;">Contoh Kotak</h3>
         <div class="kotak">
@@ -129,38 +157,37 @@ body{
         </div>
     </div>
 
-    <!-- DATA SISWA -->
     <div class="card">
         <h3 style="margin-bottom:15px;">Siswa Selesai</h3>
 
         <div class="kelas">
             <div class="kelas-title">X - TKJ</div>
             <ul class="list">
-                <li>Febri Putri Brilianto</li>
-                <li>Kaniatus Syarifah</li>
-                <li>Bima Habibie Arthayahsyah </li>
-                <li>Yosua Sianturi</li>
-                <li>Arjuna</li>
-                <li>Muhammad Pebriansyah</li>
-                <li>Aldwin Chairi Ihsan</li>
-                <li>Nazwa Afriani Khofifah</li>
-                <li>Hamza Manan</li>
-                <li>Dhika Habibie Arthayahsyah</li>
-                <li>Alfath Muhammad Yaza</li>
-                <li>Dhiza Varliza</li>
+                <li><span class="nama-siswa">Febri Putri Brilianto</span><span class="badge">9.75</span></li>
+                <li><span class="nama-siswa">Kaniatus Syarifah</span><span class="badge">8.90</span></li>
+                <li><span class="nama-siswa">Bima Habibie Arthayahsyah</span><span class="badge">9.20</span></li>
+                <li><span class="nama-siswa">Yosua Sianturi</span><span class="badge">8.50</span></li>
+                <li><span class="nama-siswa">Arjuna</span><span class="badge">9.00</span></li>
+                <li><span class="nama-siswa">Muhammad Pebriansyah</span><span class="badge">8.85</span></li>
+                <li><span class="nama-siswa">Aldwin Chairi Ihsan</span><span class="badge">9.10</span></li>
+                <li><span class="nama-siswa">Nazwa Afriani Khofifah</span><span class="badge">9.60</span></li>
+                <li><span class="nama-siswa">Hamza Manan</span><span class="badge">8.95</span></li>
+                <li><span class="nama-siswa">Dhika Habibie Arthayahsyah</span><span class="badge">9.30</span></li>
+                <li><span class="nama-siswa">Alfath Muhammad Yaza</span><span class="badge">8.70</span></li>
+                <li><span class="nama-siswa">Dhiza Varliza</span><span class="badge">9.40</span></li>
             </ul>
         </div>
 
         <div class="kelas">
             <div class="kelas-title">XI - TKJ</div>
             <ul class="list">
-                <li>Andhes Prakoso</li>
-                <li>Dwi Rahayu Ningsih</li>
-                <li>Juliana Jolie</li>
-                <li>Rizki Maulana</li>
-                <li>Rafi Abdul Ghaniyy</li>
-                <li>Aji Cahya Rajiman</li>
-                <li>Nova Tri Setiawan</li>
+                <li><span class="nama-siswa">Andhes Prakoso</span><span class="badge">8.80</span></li>
+                <li><span class="nama-siswa">Dwi Rahayu Ningsih</span><span class="badge">9.15</span></li>
+                <li><span class="nama-siswa">Juliana Jolie</span><span class="badge">9.05</span></li>
+                <li><span class="nama-siswa">Rizki Maulana</span><span class="badge">8.60</span></li>
+                <li><span class="nama-siswa">Rafi Abdul Ghaniyy</span><span class="badge">9.25</span></li>
+                <li><span class="nama-siswa">Aji Cahya Rajiman</span><span class="badge">8.95</span></li>
+                <li><span class="nama-siswa">Nova Tri Setiawan</span><span class="badge">9.50</span></li>
             </ul>
         </div>
 
